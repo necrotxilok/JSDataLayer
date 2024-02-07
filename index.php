@@ -130,9 +130,9 @@
 		</template>
 
 		<?php if ($editMode) { ?>
-			<?php require_once "public/tpls/edit_courses.tpl"; ?>
-			<?php require_once "public/tpls/edit_units.tpl"; ?>
-			<?php require_once "public/tpls/edit_activities.tpl"; ?>
+			<?php require_once "public/templates/edit_courses.tpl.php"; ?>
+			<?php require_once "public/templates/edit_units.tpl.php"; ?>
+			<?php require_once "public/templates/edit_activities.tpl.php"; ?>
 		<?php } ?>
 
 	</div>
