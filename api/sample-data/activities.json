@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "course_id": 1,
+        "unit_id": 1,
+        "name": "Activity Test 1.1"
+    },
+    {
+        "id": 2,
+        "course_id": 1,
+        "unit_id": 1,
+        "name": "Activity Test 1.2"
+    },
+    {
+        "id": 3,
+        "course_id": 1,
+        "unit_id": 2,
+        "name": "Activity Test 2.1"
+    },
+    {
+        "id": 4,
+        "course_id": 1,
+        "unit_id": 2,
+        "name": "Activity Test 2.2"
+    },
+    {
+        "id": 5,
+        "course_id": 1,
+        "unit_id": 2,
+        "name": "Activity Test 2.3"
+    }
+]

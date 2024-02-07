@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "course_id": 1,
+        "name": "Unit Test 1"
+    },
+    {
+        "id": 2,
+        "course_id": 1,
+        "name": "Unit Test 2"
+    },
+    {
+        "id": 3,
+        "course_id": 1,
+        "name": "Unit Test 3"
+    },
+    {
+        "id": 4,
+        "course_id": 2,
+        "name": "Unit 1"
+    },
+    {
+        "id": 5,
+        "course_id": 2,
+        "name": "Unit 2"
+    },
+    {
+        "id": 6,
+        "course_id": 2,
+        "name": "Unit 3"
+    }
+]

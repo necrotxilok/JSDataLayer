@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "Green Book",
+        "theme": "green-book"
+    },
+    {
+        "id": 2,
+        "name": "Blue Book",
+        "theme": "blue-book"
+    },
+    {
+        "id": 3,
+        "name": "White Book",
+        "theme": "white-book"
+    },
+    {
+        "id": 4,
+        "name": "Red Book",
+        "theme": "red-book"
+    },
+    {
+        "id": 5,
+        "name": "Yellow Book",
+        "theme": "yellow-book"
+    }
+]
