@@ -1,0 +1,68 @@
+
+/* Book Themes */
+
+/* GREEN */
+.book.green-book .side {
+	background-color: #0db14c;
+}
+.book.green-book .cover {
+	background-image: url('../img/book-cover-1.png');
+}
+.book-preview .book-panel.green-book {
+	background-color: #0db14c;
+	background-image: url('../img/book-cover-1.png');
+}
+
+/* BLUE */
+.book.blue-book .side {
+	background-color: #0293cf;
+}
+.book.blue-book .cover {
+	background-image: url('../img/book-cover-2.png');
+}
+.book-preview .book-panel.blue-book {
+	background-color: #0293cf;
+	background-image: url('../img/book-cover-2.png');
+}
+
+/* WHITE */
+.book.white-book .side {
+	background-color: #fff;
+}
+.book.white-book .cover {
+	background-image: url('../img/book-cover-3.png');
+	color: #000;
+}
+.book-preview .book-panel.white-book {
+	background-color: #fff;
+	background-image: url('../img/book-cover-3.png');
+	color: #000;
+}
+
+/* RED */
+.book.red-book .side {
+	background-color: #c00;
+}
+.book.red-book .cover {
+	background-image: url('../img/book-cover-4.png');
+	color: #000;
+}
+.book-preview .book-panel.red-book {
+	background-color: #c00;
+	background-image: url('../img/book-cover-4.png');
+	color: #000;
+}
+
+/* YELLOW */
+.book.yellow-book .side {
+	background-color: #f2f200;
+}
+.book.yellow-book .cover {
+	background-image: url('../img/book-cover-5.png');
+	color: #000;
+}
+.book-preview .book-panel.yellow-book {
+	background-color: #f2f200;
+	background-image: url('../img/book-cover-5.png');
+	color: #000;
+}

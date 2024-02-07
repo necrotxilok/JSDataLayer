@@ -1,0 +1,171 @@
+
+.book-preview {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #000c;
+	z-index: 10;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.close-course {
+	font-size: 30px;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.book-actions {
+	position: absolute;
+	top: 12px;
+	right: -64px;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+}
+.book-actions > div {
+	margin-bottom: 12px;
+}
+
+/* Book Panel */
+
+.book-panel {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	bottom: 0;
+	margin-left: -450px;
+	width: 900px;
+	padding: 30px;
+	background-color: #333;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	transition: all 0.3s;
+	transform: translateY(100%);
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: bottom left;
+	border-right: 2px solid #0007;
+	box-shadow: 0 0 100px #fff4;
+}
+.book-panel .title {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 50%;
+	font-size: 80px;
+	font-weight: 1000;
+	text-transform: uppercase;
+	padding: 20px 40px;
+	line-height: 1;
+}
+
+.book-panel .group-button > div:hover {
+	opacity: 1;
+}
+
+
+/* Units */
+
+.book-panel .units {
+	position: absolute;
+	top: 60px;
+	bottom: 30px;
+	left: 50%;
+	width: 50%;
+	padding: 0px 20px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.book-panel .units .empty {
+	font-style: italic;
+	margin-bottom: 10px;
+}
+.book-panel .unit {
+	margin-bottom: 10px;
+	position: relative;
+}
+.book-panel .unit > .name {
+	padding: 10px 16px;
+	background-color: #0002;
+	border-radius: 6px;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 24px;
+}
+.book-panel .unit .unit-actions {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+.book-panel .unit .open-unit {
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.book-panel .unit .open-unit:hover {
+	background-color: #0004;
+}
+
+/* Unit Activities */
+
+.book-panel .unit .activities {
+	background-color: #fff3;
+	border-radius: 6px;
+	overflow: hidden;
+	transition: all 0.2s;
+	max-height: 0;
+}
+.book-panel .unit .activity {
+	margin: 16px;
+	font-size: 20px;
+	position: relative;
+}
+.book-panel .unit .activity .activity-actions {
+	position: absolute;
+	top: -9px;
+	right: -6px;
+}
+.book-panel .unit .activity.empty {
+	font-size: 16px;
+	font-style: italic;
+}
+.book-panel .unit .open-activity {
+	cursor: pointer;
+}
+.book-panel .unit .open-activity:hover {
+	text-decoration: underline;
+}
+
+.book-panel .unit.open .name {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.book-panel .unit.open .activities {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	transition: all 0.5s;
+	max-height: 8500px;
+}
+
+/* Book Preview Open */
+
+.book-preview.open {
+	visibility: visible;
+	transition: opacity 0.2s;
+	opacity: 1;
+}
+.book-preview.open .book-panel {
+	transform: translateY(0);
+}
+.book-preview.closing {
+	opacity: 0;
+}
+.book-preview.closing .book-panel {
+	transform: translateY(100%);
+}
+
+
