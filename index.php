@@ -27,13 +27,13 @@
 	<div id="app">
 		<div class="actions">
 			<div class="group-button">
-				<div id="fullBookDataButton" class="<?=$fullBookDataButtonClass?>" title="Full Book Data"><?=file_get_contents("icons/full.svg")?></div>
-				<div id="layeredBookDataButton" class="<?=$layeredBookDataButtonClass?>" title="Layered Book Data"><?=file_get_contents("icons/layered.svg")?></div>
+				<div id="fullBookDataButton" class="<?=$fullBookDataButtonClass?>" title="Full Book Data"><?=file_get_contents("public/icons/full.svg")?></div>
+				<div id="layeredBookDataButton" class="<?=$layeredBookDataButtonClass?>" title="Layered Book Data"><?=file_get_contents("public/icons/layered.svg")?></div>
 			</div>
 			<?php if (!$editMode) { ?>
-				<div id="editModeButton" class="circle-button" title="Edit Mode"><?=file_get_contents("icons/edit.svg")?></div>
+				<div id="editModeButton" class="circle-button" title="Edit Mode"><?=file_get_contents("public/icons/edit.svg")?></div>
 			<?php } else { ?>
-				<div id="viewModeButton" class="circle-button" title="View Mode"><?=file_get_contents("icons/view.svg")?></div>
+				<div id="viewModeButton" class="circle-button" title="View Mode"><?=file_get_contents("public/icons/view.svg")?></div>
 			<?php } ?>
 		</div>
 		<h1><?php if ($editMode) { ?>Edit Books <span id="addBookButton" class="circle-button" title="Add New Book">+</span><?php } else { ?>View Books<?php } ?></h1>
@@ -42,8 +42,8 @@
 			<div class="book-panel">
 				<?php if ($editMode) { ?>
 					<div class="book-actions">
-						<div id="editBookButton" class="circle-button"><?=file_get_contents("icons/edit.svg")?></div>
-						<div id="deleteBookButton" class="circle-button"><?=file_get_contents("icons/delete.svg")?></div>
+						<div id="editBookButton" class="circle-button"><?=file_get_contents("public/icons/edit.svg")?></div>
+						<div id="deleteBookButton" class="circle-button"><?=file_get_contents("public/icons/delete.svg")?></div>
 					</div>
 				<?php } ?>
 				<div class="close-course">✕</div>
@@ -110,8 +110,8 @@
 				<div class="name open-unit">${name}</div>
 				<?php if ($editMode) { ?>
 					<div class="group-button unit-actions">
-						<div class="edit-unit-button"><?=file_get_contents("icons/edit.svg")?></div>
-						<div class="delete-unit-button"><?=file_get_contents("icons/delete.svg")?></div>
+						<div class="edit-unit-button"><?=file_get_contents("public/icons/edit.svg")?></div>
+						<div class="delete-unit-button"><?=file_get_contents("public/icons/delete.svg")?></div>
 					</div>
 				<?php } ?>
 				<div class="activities"></div>
@@ -122,17 +122,17 @@
 				<div class="name open-activity">${name}</div>
 				<?php if ($editMode) { ?>
 					<div class="group-button activity-actions">
-						<div class="edit-activity-button"><?=file_get_contents("icons/edit.svg")?></div>
-						<div class="delete-activity-button"><?=file_get_contents("icons/delete.svg")?></div>
+						<div class="edit-activity-button"><?=file_get_contents("public/icons/edit.svg")?></div>
+						<div class="delete-activity-button"><?=file_get_contents("public/icons/delete.svg")?></div>
 					</div>
 				<?php } ?>				
 			</div>
 		</template>
 
 		<?php if ($editMode) { ?>
-			<?php require_once "tpls/edit_courses.tpl"; ?>
-			<?php require_once "tpls/edit_units.tpl"; ?>
-			<?php require_once "tpls/edit_activities.tpl"; ?>
+			<?php require_once "public/tpls/edit_courses.tpl"; ?>
+			<?php require_once "public/tpls/edit_units.tpl"; ?>
+			<?php require_once "public/tpls/edit_activities.tpl"; ?>
 		<?php } ?>
 
 	</div>
