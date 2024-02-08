@@ -24,17 +24,21 @@ can copy contents from `api/sample-data/` to `api/data`.
 
 ## Usage
 
-The application use a JS Class called RestCollection which allows to
+The application use a JS class called **RestCollection** which allows to
 configure any API in back-end to load and manage data with simple 
 methods in the front-end.
 
-Any loaded data will be cached in memory using a secondary JS Class
-called Collection so data will be loaded from server only once.
+Any loaded data will be cached in memory using a secondary JS class
+called **Collection** so data will be loaded from server only once.
+
+The JS **Collection** class will indexate all objects by **ID** making 
+easy and fast getting data from the collection or interact with 
+any operation like adding new items, update or delete them.
 
 Books are composed by 3 collections:
 
-- **CourseCollection**: Basic information of the book.
-- **UnitCollection**: The units of the book.
+- **CoursesCollection**: Basic information of the book.
+- **UnitsCollection**: The units of the book.
 - **ActivitiesCollection**: The activities in each unit from the book.
 
 This collections manage all operations with all elments of the book.
@@ -54,7 +58,7 @@ you open an activity the content will be loaded.
 **Full Book Data**
 
 In this behaviour a new collection will be activated to manage all
-book data (BookCollection) replacing (CourseCollection).
+book data (BooksCollection) replacing (CoursesCollection).
 
 Then, when you open a book, all the contents of the book will be 
 loaded in memory using a single API and storing the hierarchy 
