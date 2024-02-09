@@ -22,6 +22,9 @@ php -S localhost:8000
 If you want to start the project with some simple books created you 
 can copy contents from `api/sample-data/` to `api/data`.
 
+![imagen](https://github.com/necrotxilok/jsdatalayer/assets/5145866/f2faf08d-a94f-413c-b6f2-206c7a132556)
+
+
 ## Usage
 
 The application use a JS class called **RestCollection** which allows to
@@ -43,7 +46,7 @@ Books are composed by 3 collections:
 
 This collections manage all operations with all elments of the book.
 
-**Layered Book Data**
+### Layered Book Data
 
 This is the default loading behaviour.
 
@@ -55,7 +58,7 @@ If you open a book then the units will be loaded. If you open an unit
 then the activities on that unit will be loaded. And finally when 
 you open an activity the content will be loaded.
 
-**Full Book Data**
+### Full Book Data
 
 In this behaviour a new collection will be activated to manage all
 book data (BooksCollection) replacing (CoursesCollection).
@@ -75,7 +78,7 @@ modifying any part of the book.
 If the full book is removed will be regenerated on read but it
 will have more cost to the server.
 
-**Edit Mode**
+### Edit Mode
 
 In Edit Mode, when the user creates, modifies or deletes any part
 of the book (courses, units or activities), the app use RestCollection 
@@ -86,60 +89,107 @@ Thanks to RestCollection the app have a permanent and consistent
 data between front-end and back-end without need of reload to
 ensure the app is updated.
 
-## App properties 
+
+## Collection Class
+
+Here are the main properties and methods of the Collection Class:
+
+| Property | Description |
+| - | - |
+| **type** | Type of the class. |
+| **pk** | Primary Key of the items contained in the collection. |
+| **sort** | (Optional) Method to keep collection data sorted. |
+| **data** | Object where the items are stored indexed by **pk** |
+| **values** | The final sorted list of items. |
+| **sorted** | Flag to regenerate the sorted list of items. |
+
+| Method | Description |
+| - | - |
+| **constructor** | Create new collection with the given settings.  |
+| **get** | Get an item of the collection by **pk**. |
+| **getAll** | Get all items in the collection sorted. |
+| **add** | Add a single item to the collection. |
+| **addItems** | Add a list of items to the collection. |
+| **save** | Update the item with same **pk** in the collection. |
+| **delete** | Delete the item with the given **pk**. |
+| **reset** | Reset collection data to an empty collection. |
+
+
+## RestCollection Class
+
+Here are the main properties and methods of the Collection Class:
+
+| Property | Description |
+| - | - |
+| **type** | Type of the class. |
+| **pk** | Primary Key of the items contained in the collection. |
+| **api** | String with the path to the server API. Can contain tokens with curly brackets like `{id}` and they will be automatically replaced by the given params. |
+| **params** | Default params to send to the server API in all requests. |
+| **collection** | Stores the data with a Collection Class. |
+| **sort** | (Optional) Method to keep the collection data sorted. |
+| **loaded** | True after the collection is fully loaded with the API data. It used to avoid a new API call to server. |
+
+| Method | Description |
+| - | - |
+| **constructor** | Create new rest collection with the given settings.  |
+| **get** | Get an item of the collection by **pk**. |
+| **getAll** | Get all items in the collection sorted. |
+| **fill** | Fill the collection with a list of items without fetching data from server. |
+| **getData** | Get data from server using GET and launch callback on success. |
+| **postData** | Send data to server using POST and launch callback on success. |
+| **load** | Get data from server using the action param `all` and store the results in the collection. |
+| **refresh** | Reset the collection and reload data from server. |
+| **create** | Sends a new item to the server using the action param `create` and adds the new item to the collection if success. |
+| **edit** | Sends a modified item with a known **pk** to the server using the action param `edit` and updates the item in the collection if success. |
+| **delete** | Sends the **pk** value of an item to the server using the action param `delete` and deletes the item in the collection if success. |
+
+
+## App Properties 
 
 The app is accesible from console using the global variable `app`.
 
 Some of the main properties are:
 
-```javascipt
-// CourseCollection|BookCollection
-app.courses
+| Property | Description |
+| - | - |
+| **app.courses** | CoursesCollection|BooksCollection. |
+| **app.course** | Current open course data if loaded. |
+| **app.course.units** | UnitsCollection. |
+| **app.unit** | Current open unit data if loaded. |
+| **app.unit.activities** | ActivitiesCollection. |
+| **app.activity** | Current open activity data if loaded. |
 
-// Current Course Data (If loaded)
-app.course
 
-// UnitCollection
-app.course.units
-
-// Current Unit Data (If loaded)
-app.unit
-
-// ActivitiesCollection
-app.unit.activities
-
-// Current Activity Data (If loaded)
-app.activity
-```
-
-## App methods
+## App Methods
 
 Any operation in the front can be executed from console using this
 methods:
 
-```javascipt
-// Open
-app.openCourse(course_id);
-app.openUnit(unit_id);
-app.openActivity(activity_id);
+### Open
 
-// Close
-app.closeCourse();
-app.closeActivity();
+| Method | Description |
+| - | - |
+| **app.openCourse(course_id)** | Load data from server (first time) and render course in the app. |
+| **app.openUnit(unit_id)** | Load data from server (first time) and render the unit in the course. |
+| **app.openActivity(activity_id)** | Load data from server (first time) and render the content of activity in a page. |
 
-// Get Loaded Data
-app.getCourse(course_id);
-app.getUnit(unit_id);
-app.getActivity(activity_id);
+### Close
 
-// Render
-app.render();
-app.renderCourse();
-app.renderUnit();
-app.renderActivity();
-```
+| Method | Description |
+| - | - |
+| **app.closeCourse()** | Close current Course and the Activity Page if open. |
+| **app.closeActivity()** | Close current Activity page if open. |
 
-## Book generator
+### Get Loaded Data
+
+| Method | Description |
+| - | - |
+| **app.getCourse(course_id)** | Get data from the given course id if loaded. |
+| **app.getUnit(unit_id)** | Get data from the given unit id if loaded. |
+| **app.getActivity(activity_id)** | Get data from the given activity id if loaded. |
+
+
+## Book Generator
 
 To test all the performance, the application has a method allowing to 
 create a new book of any number of units and activities with some 
