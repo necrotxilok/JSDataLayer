@@ -74,6 +74,7 @@
 				if (settings.pk) this.pk = settings.pk;
 				if (settings.api) this.api = settings.api;
 				if (settings.params) this.params = settings.params;
+				if (settings.sort) this.sort = settings.sort;
 			}
 			this.collection = new Collection({
 				pk: this.pk,

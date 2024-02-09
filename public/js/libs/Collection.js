@@ -15,6 +15,7 @@
 		constructor(settings) {
 			if (settings) {
 				if (settings.pk) this.pk = settings.pk;
+				if (settings.sort) this.sort = settings.sort;
 			}
 		}
 
