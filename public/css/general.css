@@ -29,6 +29,9 @@ img {
 	top: 30px;
 	right: 30px;
 }
+#app .actions .group-button {
+	margin-right: 15px;
+}
 
 #notifications {
 	position: fixed;
@@ -143,7 +146,7 @@ svg {
 
 .circle-button {
 	display: inline-flex;
-	margin-right: 5px;
+	margin: 0 5px;
 	background-color: #eee;
 	color: #000;
 	border: none;
