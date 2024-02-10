@@ -59,9 +59,9 @@
 		return url;
 	}
 
-	class RestCollection {
+	class ApiCollection {
 
-		type = 'rest_collection';
+		type = 'api_collection';
 		pk = 'id';
 		api = null;
 		params = {};
@@ -186,6 +186,6 @@
 
 	}
 
-	window.RestCollection = RestCollection;
+	window.ApiCollection = ApiCollection;
 
 })();

@@ -152,7 +152,7 @@
 
 		<!-- Collections -->
 		<script type="text/javascript" src="public/js/libs/Collection.js"></script>
-		<script type="text/javascript" src="public/js/libs/RestCollection.js"></script>
+		<script type="text/javascript" src="public/js/libs/ApiCollection.js"></script>
 		<script type="text/javascript" src="public/js/collections/CoursesCollection.js"></script>
 		<script type="text/javascript" src="public/js/collections/UnitsCollection.js"></script>
 		<script type="text/javascript" src="public/js/collections/ActivitiesCollection.js"></script>

@@ -10,7 +10,7 @@
 	 *
 	 */
 
-	class BooksCollection extends RestCollection {
+	class BooksCollection extends ApiCollection {
 		loadedBooks = {};
 		constructor() {
 			super({

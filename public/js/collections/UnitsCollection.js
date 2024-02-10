@@ -2,7 +2,7 @@
 (function() {
 	"use strict";
 
-	class UnitsCollection extends RestCollection {
+	class UnitsCollection extends ApiCollection {
 		course_id = null;
 		constructor(course_id) {
 			super({

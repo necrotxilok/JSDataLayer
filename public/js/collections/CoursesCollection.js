@@ -10,7 +10,7 @@
 	 *
 	 */
 
-	class CoursesCollection extends RestCollection {
+	class CoursesCollection extends ApiCollection {
 		constructor() {
 			super({
 				api: 'api/courses.php?action={action}',

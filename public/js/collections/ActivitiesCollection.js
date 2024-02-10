@@ -2,7 +2,7 @@
 (function() {
 	"use strict";
 
-	class ActivitiesCollection extends RestCollection {
+	class ActivitiesCollection extends ApiCollection {
 		course_id = null;
 		unit_id = null;
 		loadedContents = {};
