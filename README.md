@@ -27,7 +27,7 @@ can copy contents from `api/sample-data/` to `api/data`.
 
 ## Usage
 
-The application use a JS class called **RestCollection** which allows to
+The application use a JS class called **ApiCollection** which allows to
 configure any API in back-end to load and manage data with simple 
 methods in the front-end.
 
@@ -81,11 +81,11 @@ will have more cost to the server.
 ### Edit Mode
 
 In Edit Mode, when the user creates, modifies or deletes any part
-of the book (courses, units or activities), the app use RestCollection 
+of the book (courses, units or activities), the app use ApiCollection 
 settings to automatically send operation to the server and retrive 
 only new information.
 
-Thanks to RestCollection the app have a permanent and consistent 
+Thanks to ApiCollection the app have a permanent and consistent 
 data between front-end and back-end without need of reload to
 ensure the app is updated.
 
@@ -115,7 +115,7 @@ Here are the main properties and methods of the Collection Class:
 | **reset** | Reset collection data to an empty collection. |
 
 
-## RestCollection Class
+## ApiCollection Class
 
 Here are the main properties and methods of the Collection Class:
 
