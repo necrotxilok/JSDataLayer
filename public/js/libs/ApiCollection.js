@@ -130,14 +130,10 @@
 				return;
 			}
 			var _self = this;
-			var url = getUrl(this.api, {action: 'all', ...this.params});
-			getData(url, function(items) {
+			this.getData({action: 'all'}, function(items) {
 				_self.loaded = true;
 				_self.collection.addItems(items);
 				callback && callback(_self.collection);
-			}, function(error) {
-				//callback && callback({error});
-				notify && notify.error(error);
 			});
 		}
 
@@ -149,38 +145,26 @@
 
 		create(data, callback) {
 			var _self = this;
-			var url = getUrl(this.api, {action: 'create', ...this.params});
-			postData(url, data, function(item) {
+			this.postData({action: 'create'}, data, function(item) {
 				_self.collection.add(item);
 				callback && callback(item);
-			}, function(error) {
-				//callback && callback({error});
-				notify && notify.error(error);
 			});
 		}
 
 		edit(data, callback) {
 			var _self = this;
-			var url = getUrl(this.api, {action: 'edit', ...this.params});
-			postData(url, data, function(item) {
+			this.postData({action: 'edit'}, data, function(item) {
 				_self.collection.save(item);
 				callback && callback(item);
-			}, function(error) {
-				//callback && callback({error});
-				notify && notify.error(error);
 			});
 		}
 
 		delete(data, callback) {
 			var _self = this;
-			var url = getUrl(this.api, {action: 'delete', ...this.params});
 			var id = data[this.pk];
-			postData(url, {id}, function() {
+			this.postData({action: 'delete'}, {id}, function() {
 				_self.collection.delete(id);
 				callback && callback();
-			}, function(error) {
-				//callback && callback({error});
-				notify && notify.error(error);
 			});
 		}
 
