@@ -1,4 +1,14 @@
 <?php
+	/**
+	 * JS Data Layer - A Simple Book Library @ 2024
+	 *
+	 * Source Code: https://github.com/necrotxilok/jsdatalayer
+	 * Author: necro_txilok
+	 *
+	 * RESOURCES:
+	 * Icons: https://www.iconfinder.com/iconsets/material-core
+	 */
+
 	$editMode = !empty($_GET['edit']);
 	$fullBookData = !empty($_GET['full']);
 
@@ -6,8 +16,6 @@
 	
 	$fullBookDataButtonClass = $fullBookData ? 'active' : '';
 	$layeredBookDataButtonClass = !$fullBookData ? 'active' : '';
-
-	// ICONS: https://www.iconfinder.com/iconsets/material-core
 ?>
 <!DOCTYPE html>
 <html>
