@@ -146,6 +146,13 @@
 	</div>
 
 	<div class="scripts hidden">
+		<!-- Credits -->
+		<script type="text/javascript">
+			console.log('JS Data Layer - A Simple Book Library @ 2024');
+			console.log('Source Code: https://github.com/necrotxilok/jsdatalayer');
+			console.log('Author: necro_txilok');
+		</script>
+
 		<!-- Config Vars -->
 		<script type="text/javascript">
 			const editMode = <?=$editMode?'true':'false'?>;

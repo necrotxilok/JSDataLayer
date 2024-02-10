@@ -130,7 +130,6 @@
 			$app.on('click', '#viewModeButton', function() { loadPage('edit', false) });
 
 			console.log('App started!');
-			console.log('-----------------------------------------------');
 		}
 
 		getCourse(course_id) {
