@@ -137,11 +137,11 @@ Here are the main properties and methods of the Collection Class:
 | **fill** | Fill the collection with a list of items without fetching data from server. |
 | **getData** | Get data from server using GET and launch callback on success. |
 | **postData** | Send data to server using POST and launch callback on success. |
-| **load** | Get data from server using the action param `all` and store the results in the collection. |
-| **refresh** | Reset the collection and reload data from server. |
-| **create** | Sends a new item to the server using the action param `create` and adds the new item to the collection if success. |
-| **edit** | Sends a modified item with a known **pk** to the server using the action param `edit` and updates the item in the collection if success. |
-| **delete** | Sends the **pk** value of an item to the server using the action param `delete` and deletes the item in the collection if success. |
+| **load** | Get data from server using the action param `all` and store the results in the collection. Finally, launch callback on success. |
+| **refresh** | Reset the collection and reload data from server. Finally, launch callback on success. |
+| **create** | Sends a new item to the server using the action param `create` and adds the new item to the collection if success. Finally, launch callback on success. |
+| **edit** | Sends a modified item with a known **pk** to the server using the action param `edit` and updates the item in the collection if success. Finally, launch callback on success. |
+| **delete** | Sends the **pk** value of an item to the server using the action param `delete` and deletes the item in the collection if success. Finally, launch callback on success. |
 
 
 ## App Properties 
