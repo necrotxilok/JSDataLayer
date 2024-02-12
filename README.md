@@ -131,7 +131,7 @@ Here are the main properties and methods of the Collection Class:
 
 | Method | Description |
 | - | - |
-| **constructor** | Create new rest collection with the given settings.  |
+| **constructor** | Create new API collection with the given settings.  |
 | **get** | Get an item of the collection by **pk**. |
 | **getAll** | Get all items in the collection sorted. |
 | **fill** | Fill the collection with a list of items without fetching data from server. |
